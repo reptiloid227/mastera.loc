@@ -1949,3 +1949,16 @@ input[type=submit].button {
 .tab__item > .content{
     margin-bottom: $gap-grid;
 }
+
+.buttonSection .col-12{
+    display: flex;
+    justify-content: center;
+    margin-top: -3rem;
+}
+
+.buttonSection a.button{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

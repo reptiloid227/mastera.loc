@@ -11,15 +11,22 @@
                 <h2 class="sectiontitle"><?=$args['title']?></h2>
             </div>
         </div>
+
         <div class="row content">
-            <div class="col-<?=(12-str_replace("col-", "", $args['img_width']))?> col-lg-12">
-                <?=$args['text']?>
-            </div>
-            <div class="<?=$args['img_width']?> imgbox col-lg-12">
-                <a data-fslightbox="textblock" href="<?=wp_get_attachment_image_url($args['img'], 'full')?>">
-                <?=wp_get_attachment_image($args['img'], 'full')?>
-            </a>
-            </div>
+            <?if($args['img_width'] == 'without'):?>
+                <div class="col-12 col-lg-12">
+                    <?=$args['text']?>
+                </div>
+            <?else:?>
+                <div class="col-<?=(12-str_replace("col-", "", $args['img_width']))?> col-lg-12">
+                    <?=$args['text']?>
+                </div>
+                <div class="<?=$args['img_width']?> imgbox col-lg-12">
+                    <a data-fslightbox="textblock" href="<?=wp_get_attachment_image_url($args['img'], 'full')?>">
+                        <?=wp_get_attachment_image($args['img'], 'full')?>
+                    </a>
+                </div>
+            <?endif?>
         </div>
     </div>
 </section>

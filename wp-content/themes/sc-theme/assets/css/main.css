@@ -2176,4 +2176,18 @@ input[type=submit].button {
 
 .tab__item > .content {
   margin-bottom: 1.25rem;
+}
+
+.buttonSection .col-12 {
+  display: flex;
+  justify-content: center;
+  margin-top: -3rem;
+}
+
+.buttonSection a.button {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */
